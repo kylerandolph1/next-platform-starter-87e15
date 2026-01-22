@@ -35,5 +35,5 @@ export default async (request: Request, context: Context) => {
 
 // Configure which paths this edge function runs on
 export const config = {
-  path: '/*', // Run on all /api/* paths to collect API traffic
+  path: '/*', // Run on all /* paths to collect API traffic
 };

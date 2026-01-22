@@ -3,5 +3,5 @@
   command = "npm run build"
 
 [[edge_functions]]
-  function = "salt-collector.ts" # The name of the .ts edge function file for the collector.
+  function = "salt-collector" # The name of the .ts edge function file for the collector.
   path = "/*" # The path defined in the .ts edge function file for the collector.
