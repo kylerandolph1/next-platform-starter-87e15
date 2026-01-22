@@ -1,3 +1,6 @@
+import { createCollector } from '@salt-security/collector';
+import type { Context } from '@netlify/edge-functions';
+
 // Initialize the collector once (outside the handler for efficiency)
 const collector = createCollector({
   hybridUrl: Netlify.env.get('SALT_HYBRID_URL')!,
