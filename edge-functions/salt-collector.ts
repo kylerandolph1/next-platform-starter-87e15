@@ -10,7 +10,7 @@ const collector = createCollector({
   maxExchangeSizeBytes: 4182425,
   // Whether to allow collecting bodies without Content-Length header
   // Can cause OOM if large bodies are sent without length
-  allowBodyWithoutContentLengthHeader:false,
+  allowBodyWithoutContentLengthHeader:true,
   collectExchangeWithoutBody:true,
   // Optional metadata
   collectorPlatform: 'netlify',
@@ -35,5 +35,5 @@ export default async (request: Request, context: Context) => {
 
 // Configure which paths this edge function runs on
 export const config = {
-  path: '/*', // Run on all /* paths to collect API traffic
+  path: '/*', // Run on all /api/* paths to collect API traffic
 };
